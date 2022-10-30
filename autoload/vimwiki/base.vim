@@ -9,7 +9,7 @@ endif
 let g:loaded_vimwiki_auto = 1
 
 
-let g:vimwiki_max_scan_for_caption = 5
+let g:vimwiki_max_scan_for_caption = 5/
 
 
 function! s:safesubstitute(text, search, replace, mode) abort
@@ -296,7 +296,7 @@ function! vimwiki#base#system_open_link(url) abort
     call system('open ' . shellescape(a:url).' &')
   endfunction
   function! s:linux_handler(url) abort
-    call system('xdg-open ' . shellescape(a:url).' &')
+    call system('xdg-open ' . shellescape(a:url))
   endfunction
   try
     if vimwiki#u#is_windows()
